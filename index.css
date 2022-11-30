@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  /* background: gainsboro; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* color selector header group div */
+.color-selector {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+/* color picker */
+input {
+  width: 170px;
+  min-width: 50px;
+  max-width: 100px;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+/* color scheme selector */
+select {
+  width: 100%;
+  min-width: 150px;
+  max-width: 400px;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  background-color: white;
+  padding: 0 0.7rem;
+  cursor: pointer;
+}
+
+/* color generator button */
+button {
+  color: #374151;
+  min-width: 120px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  background-color: white;
+  padding: 0.7rem 0.3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bcc0c7;
+}
+
+/* each colors div */
+.colors {
+  height: 100vh;
+  background: goldenrod;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* colors hex values */
+.color-hex {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 1rem 1rem;
+  font-size: 0.8rem;
+  background: #fff;
+  color: #2b283a;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: 25%;
+  left: 25%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* tooltip arrow at the bottom */
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* media query above 750px screen size devices */
+@media (min-width: 750px) {
+  .color-selector {
+    padding: 3rem;
+  }
+
+  .color-hex,
+  button,
+  select {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 1rem;
+  }
+
+  input {
+    height: 3.5rem;
+  }
+
+  .color-hex {
+    padding: 2rem 3rem;
+  }
+
+  option {
+    font-size: 1.3rem;
+  }
+}
