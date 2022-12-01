@@ -34,7 +34,7 @@ function render() {
     html += `
          <div class="single-color tooltip" id="singleColor"  style="background-color: ${color.hex.value}"  data-hex="${color.hex.value}"  >
               <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-              <div class="color-hex" id="colorHex" data-hex="${color.hex.value}"  >${color.hex.value}</div>
+              <div class="color-hex light-mode" id="colorHex" data-hex="${color.hex.value}"  >${color.hex.value}</div>
          </div>`;
   }
 

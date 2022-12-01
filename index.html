@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="prefers-color-scheme" content="dark light" /> -->
+    <!-- external stylesheet -->
     <link rel="stylesheet" href="./index.css" />
 
     <!-- Google fonts -->
@@ -17,11 +19,11 @@
     <title>Color Scheme Generator</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container light-mode">
       <!-- Color picker header group-->
       <div class="color-selector">
         <input type="color" value="BF4040" />
-        <select name="" id="">
+        <select name="" id="" class="light-mode">
           <option value="monochrome" selected>Monochrome</option>
           <option value="analogic">Analogic</option>
           <option value="monochrome-dark">Monochrome-dark</option>
@@ -33,7 +35,7 @@
         </select>
 
         <!-- color generator button -->
-        <button>Get color scheme</button>
+        <button class="light-mode">Get color scheme</button>
       </div>
 
       <!-- Generated Colors -->
